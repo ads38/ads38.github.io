@@ -22,7 +22,10 @@
 <meta name="keywords" content="" />
 
 
-<meta name="description" content="" />
+<meta name="description" content="这是生成的测试页面，内部名称是TestPage。教程在我的第一篇博客，点此进入
+1.键入以下命令生成页面1hexo new page &quot;TestPage&quot;
+
+生成文件夹 bl..." />
 
 
 <meta name="robots" content="all" />
@@ -33,7 +36,7 @@
 
 <title>
     
-    分类: 随笔 |
+    测试页面 |
     
     蚊子李的奇幻空间
 </title>
@@ -134,40 +137,28 @@
         <div class="container">
             <div class="row">
                 <main class="col-md-8 main-content ">
-                    <ol class="breadcrumb">
+                    <div>
     
-    <li>
-        随笔
-    </li>
-    
-</ol>
+    <article class="post">
+    <h1 class="post-head">
+        测试页面
+    </h1>
+    <div class="post-body">
+        <p>这是生成的测试页面，内部名称是TestPage。<br>教程在我的第一篇博客，<a href="/first-blog">点此进入</a></p>
+<h2 id="1-键入以下命令生成页面"><a href="#1-键入以下命令生成页面" class="headerlink" title="1.键入以下命令生成页面"></a>1.键入以下命令生成页面</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new page <span class="string">&quot;TestPage&quot;</span></span><br></pre></td></tr></table></figure>
 
-<article class="post">
-    
-    <div class="post-content">
-        <div class="post-head home-post-head">
-            <h1 class="post-title">
-                <a href="/2022/05/26/first-blog/">
-                    第一篇博客</a>
-            </h1>
-            <div class="post-meta"> &bull;
-                <time class="post-date" datetime="" title="">
-                    2022年05月26日
-                </time>
-            </div>
-        </div>
-        <p class="brief">
-            
-            这是我的第一篇基于Hexo框架的博客。
-使用的主题是Snippet。
-以下链接来源于博客园或者CSDN，其中包括如何在Github上搭建基于Hexo框架博客的教程，以及其它常见的小问题。
-一.参考链接​	1.【基础篇】hexo博客搭建...
-            
-        </p>
+<p>生成文件夹 blogs&#x2F;source&#x2F;TestPage，其中有一个文件“index.md”<br><br></p>
+<h2 id="2-找到主题配置文件"><a href="#2-找到主题配置文件" class="headerlink" title="2.找到主题配置文件"></a>2.找到主题配置文件</h2><p>文件路径如“blogs&#x2F;themes&#x2F;snippet&#x2F;config.yml”，在“menu”中添加“page”项。</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">## menu</span></span><br><span class="line"><span class="attr">menu:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="attr">page:</span> <span class="string">home</span></span><br><span class="line">    <span class="attr">url:</span> <span class="string">/</span></span><br><span class="line">    <span class="attr">icon:</span></span><br><span class="line"></span><br><span class="line">  <span class="bullet">-</span> <span class="attr">page:</span> <span class="string">时间轴</span></span><br><span class="line">    <span class="attr">url:</span> <span class="string">/archives/</span></span><br><span class="line">    <span class="attr">icon:</span></span><br><span class="line">   </span><br><span class="line">  <span class="bullet">-</span> <span class="attr">page:</span> <span class="string">随笔</span></span><br><span class="line">    <span class="attr">url:</span> <span class="string">/categories/随笔/</span></span><br><span class="line">    </span><br><span class="line">  <span class="bullet">-</span> <span class="attr">page:</span> <span class="string">新测试页面</span></span><br><span class="line">    <span class="attr">url:</span> <span class="string">/TestPage</span></span><br></pre></td></tr></table></figure>
+<br>
+
+<h2 id="3-编辑“index-md”文件"><a href="#3-编辑“index-md”文件" class="headerlink" title="3.编辑“index.md”文件"></a>3.编辑“index.md”文件</h2><p>编辑上述的“index.md”文件，然后执行“hexo s”，打开“localhost:4000”就能看到你的新测试页面了。访问链接是<a target="_blank" rel="noopener" href="http://localhost:4000/TestPage">http://localhost:4000/TestPage</a></p>
+<hr>
+
     </div>
 </article>
-
-
+    
+</div>
                 </main>
                 
                     
