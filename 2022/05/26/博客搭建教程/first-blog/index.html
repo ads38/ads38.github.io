@@ -189,6 +189,7 @@
 <p>​	7.<a target="_blank" rel="noopener" href="https://blog.csdn.net/ganzhilin520/article/details/79053399/">hexo添加文章更新时间</a></p>
 <p>​	8.<a target="_blank" rel="noopener" href="https://blog.csdn.net/longroad1216/article/details/114884036">新版本Hexo+next搭建博客的注意事项（更新中）</a></p>
 <p>​	9.<a target="_blank" rel="noopener" href="https://blog.csdn.net/u012294515/article/details/83094693">Hexo | NexT打造一个炫酷博客</a></p>
+<p>​	10.<a target="_blank" rel="noopener" href="https://www.cnblogs.com/qisi007/p/13731562.html">hexo博客添加gitalk评论系统</a></p>
 <h3 id="二-下载工具"><a href="#二-下载工具" class="headerlink" title="二.下载工具"></a>二.下载工具</h3><p>​	1.node.js</p>
 <p>​	2.git-scm</p>
 <p>​	3.Typora（MarkDown 文本编辑器）</p>
@@ -222,22 +223,24 @@
 
 <div id="comments">
     
-    
-<div class="utteranc">
-  
-  <script
-    src='https://utteranc.es/client.js'
-    repo='shenliyang/snippet-comment'
-    issue-term='pathname'
-    issue-number=''
-    theme='github-light'
-    label=''
-    crossorigin='anonymous'
-    async
-  ></script>
-</div>
-
-
+    <link rel="stylesheet" href="https://cdn.bootcss.com/gitalk/1.4.1/gitalk.min.css">
+<script src="//cdn.bootcss.com/gitalk/1.4.1/gitalk.min.js"></script>
+<script src="//cdn.bootcss.com/blueimp-md5/2.9.0/js/md5.min.js"></script>
+<div id="gitalk-container"></div>
+<script type="text/javascript">
+var gitalk = new Gitalk({
+    // Gitalk配置
+    language: "zh-CN",
+    clientID: "951a67446328ee70265d",
+    clientSecret: "def8f00cba3a215839d6a523f5a377ac8b833a00",
+    repo: "ads38.github.io",
+    owner: "ads38",
+    admin: ["ads38"],
+    id: md5(location.pathname),
+    distractionFreeMode: true
+});
+gitalk.render('gitalk-container');
+</script>
 
 </div>
 
