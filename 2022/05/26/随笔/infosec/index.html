@@ -147,7 +147,7 @@
     
     <span class="categories-meta fa-wrap">
         <i class="fa fa-folder-open-o"></i>
-        
+        <a class="category-link" href="/categories/%E9%9A%8F%E7%AC%94/">随笔</a>
     </span>
     
     
@@ -168,6 +168,11 @@
             2022/05/26</span>
     </span>
     
+    <span class="fa-wrap">
+        <i class="fa fa-eye"></i>
+        <span id="busuanzi_value_page_pv"></span>
+    </span>
+    
     
 </div>
         
@@ -177,7 +182,7 @@
     <div class="post-body post-content">
         <p>　实际上，每个人只要连接至网络，大家的信息就会被泄露到各个“黑色产业链”或者“不法分子”等人、组织手中。最常见的就是接到诈骗电话，很多人因此蒙受损失。我们的信息是如何泄露的，又应该如何保护呢？<br><br></p>
 <h2 id="1-手机App或“小程序”"><a href="#1-手机App或“小程序”" class="headerlink" title="1.手机App或“小程序”"></a>1.手机App或“小程序”</h2><p>　这主要体现在注册过程以及权限获取方面。</p>
-<center><img src="/2022/05/26/infosec/app.jpg" style="zoom:30%;"></center>
+<center><img src="/2022/05/26/%E9%9A%8F%E7%AC%94/infosec/app.jpg" style="zoom:30%;"></center>
 
 <p>　App或小程序的注册过程中需要电话号码，在此期间电话号码上传到对方的服务器（数据库中）。这里的安全弱点有，<strong>上传过程没有经过加密</strong>，被中间人嗅探到（如MITM攻击）；<strong>对方的数据库弱点</strong>，利用弱点（如撞库）获取电话号码；<strong>对方内部人员故意泄密</strong>使得数据大量流出等等。因此那些别有用心之人就能够获取用户的电话号码并据此实施诈骗。另外使用App或小程序注册时需要实名认证，信息的泄露方式与上述同理，网络罪犯获得更多个人敏感信息可以提升他们实施诈骗的成功率。最显著的例子是，接到诈骗电话，对方竟然知晓自己的个人信息，包括姓名、工作单位和身份证号等等。对方也许会冒充成互联网公司的客服人员，但他们的来电号码不是官方的，而是境外号码，或者是虚假的11位手机号码（指中国大陆地区的号码），而且他们通话时背景音嘈杂，此时可以断定他们就是诈骗人员。</p>
 <p>　权限获取，以下总结App或小程序会获取哪些手机的敏感权限。</p>
@@ -188,10 +193,10 @@
 <p>　（5）相册：用于上传照片，App亦可通过相册分析图片的元数据得出用户常住地，得出用户画像。</p>
 <p>　还有其他的因素，可以查看这篇文章。<a target="_blank" rel="noopener" href="https://www.cnblogs.com/SNSD-99/p/14383023.html">《国产App为什么如此“臃肿”？！》</a><br><br></p>
 <h2 id="2-电子邮件"><a href="#2-电子邮件" class="headerlink" title="2.电子邮件"></a>2.电子邮件</h2><p>　虽然现在大家很少用电子邮件，但这一点仍需注意。电子邮件还是可以反映一部分信息的，至少能够知道用户的名称和使用的邮箱服务提供商。现在常用的大部分是qq邮箱，形式一般是“QQ号@qq.com”。所以知道了QQ号，可以通过某种形式得知用户的个人信息，甚至“反推出”电话号码，现在QQ号注册也是实名制的……此外用户可能饱受垃圾邮件的困扰……</p>
-<center><img src="/2022/05/26/infosec/email.jpg" style="zoom:30%;"></center><br><br>
+<center><img src="/2022/05/26/%E9%9A%8F%E7%AC%94/infosec/email.jpg" style="zoom:30%;"></center><br><br>
 
 <h2 id="3-其他社交平台"><a href="#3-其他社交平台" class="headerlink" title="3.其他社交平台"></a>3.其他社交平台</h2><p>　其他社交平台也会泄露一定的个人信息。以下举几个例子。</p>
-<center><img src="/2022/05/26/infosec/weibo.jpg" style="zoom:30%;"></center>
+<center><img src="/2022/05/26/%E9%9A%8F%E7%AC%94/infosec/weibo.jpg" style="zoom:30%;"></center>
 
 <p>　大家可在微博上填写个人信息，包括昵称、工作单位等等。根据以上信息能够得知用户的性别、年龄、所在单位等等。</p>
 <p>　互动：别有用心者可以查看用户的关注和粉丝列表，如果粉丝当中有自己的同学，该用户和同学间存在互动，而且该同学个人信息页面的院校和该同学一样，就可推断两人在同一所学校。甚至可在互动中获得这两人的真实姓名！关注列表中也可了解用户的喜好等等。</p>
@@ -229,7 +234,7 @@
 <div class="article-nav prev-next-wrap clearfix">
     
     
-    <a href="/2022/05/26/picTest/" class="next-post btn btn-default" title='图片测试'>
+    <a href="/2022/05/26/%E9%9A%8F%E7%AC%94/picTest/" class="next-post btn btn-default" title='图片测试'>
         <span class="hidden-lg">下一篇</span>
         <span class="hidden-xs">
             图片测试</span><i class="fa fa-angle-right fa-fw"></i>
@@ -289,6 +294,16 @@
             <div class="col-sm-12">
                 <div class="busuanzi">
     
+    访问量:
+    <strong id="busuanzi_value_site_pv">
+        <i class="fa fa-spinner fa-spin"></i>
+    </strong>
+    &nbsp; | &nbsp;
+    访客数:
+    <strong id="busuanzi_value_site_uv">
+        <i class="fa fa-spinner fa-spin"></i>
+    </strong>
+    
 </div>
             </div>
             <div class="col-sm-12">
@@ -308,6 +323,8 @@
 </div>
 
 
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
 
 <script src="/js/app.js?rev=@@hash.js"></script>
