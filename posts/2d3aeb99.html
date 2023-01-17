@@ -1,0 +1,199 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>在Snippet主题中添加博文更新日期 | Girls' Generation</title><meta name="author" content="Taeyeon"><meta name="copyright" content="Taeyeon"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="ffffff"><meta name="description" content="今天除了给自己的网站添加字数统计外，我无意中还探索到Snippet主题添加更新日期，尝试之后还真的成功了。网上根本就找不到资料，找到了也适用于其它的主题。 　　还是找到路径 C:\blogs\themes\snippet\layout\_partial 下的 article-meta.ejs 文件，在其中添加以下代码。想详细看代码怎么插入的可以去这里：《在Snippet主题中添加字数统计》，这">
+<meta property="og:type" content="article">
+<meta property="og:title" content="在Snippet主题中添加博文更新日期">
+<meta property="og:url" content="https://ads38.github.io/posts/2d3aeb99.html">
+<meta property="og:site_name" content="Girls&#39; Generation">
+<meta property="og:description" content="今天除了给自己的网站添加字数统计外，我无意中还探索到Snippet主题添加更新日期，尝试之后还真的成功了。网上根本就找不到资料，找到了也适用于其它的主题。 　　还是找到路径 C:\blogs\themes\snippet\layout\_partial 下的 article-meta.ejs 文件，在其中添加以下代码。想详细看代码怎么插入的可以去这里：《在Snippet主题中添加字数统计》，这">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://images.pexels.com/photos/531602/pexels-photo-531602.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500">
+<meta property="article:published_time" content="2023-01-09T09:48:39.000Z">
+<meta property="article:modified_time" content="2023-01-14T09:03:36.206Z">
+<meta property="article:author" content="Taeyeon">
+<meta property="article:tag" content="Hexo">
+<meta property="article:tag" content="博客搭建">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://images.pexels.com/photos/531602/pexels-photo-531602.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"><link rel="shortcut icon" href="https://gcore.jsdelivr.net/gh/ads38/filebed@main/img/Taeyeon.ico"><link rel="canonical" href="https://ads38.github.io/posts/2d3aeb99"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//fonts.googleapis.com" crossorigin=""/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web&amp;display=swap" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":true,"languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":null},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: true,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '在Snippet主题中添加博文更新日期',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2023-01-14 17:03:36'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', 'ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="/rss2.xml" title="Girls' Generation" type="application/rss+xml">
+</head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://gcore.jsdelivr.net/gh/ads38/filebed@main/img/avatar.jpg" onerror="onerror=null;src='https://gcore.jsdelivr.net/gh/ads38/filebed@main/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">42</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">8</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">7</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/msg/"><i class="fa-fw fa fa-comment"></i><span> 留言和站点资讯</span></a></div><div class="menus_item"><a class="site-page" href="/gallery/"><i class="fa-fw fa-fw fas fa-images"></i><span> 图库</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友情链接</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://images.pexels.com/photos/531602/pexels-photo-531602.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=1&amp;w=500')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">Girls' Generation</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/msg/"><i class="fa-fw fa fa-comment"></i><span> 留言和站点资讯</span></a></div><div class="menus_item"><a class="site-page" href="/gallery/"><i class="fa-fw fa-fw fas fa-images"></i><span> 图库</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友情链接</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">在Snippet主题中添加博文更新日期</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-01-09T09:48:39.000Z" title="发表于 2023-01-09 17:48:39">2023-01-09</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-01-14T09:03:36.206Z" title="更新于 2023-01-14 17:03:36">2023-01-14</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B/">博客搭建教程</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">367</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>1分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="在Snippet主题中添加博文更新日期"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><p>　　今天除了给自己的网站添加字数统计外，我无意中还探索到Snippet主题添加更新日期，尝试之后还真的成功了。网上根本就找不到资料，找到了也适用于其它的主题。</p>
+<p>　　还是找到路径 <code>C:\blogs\themes\snippet\layout\_partial</code> 下的 <code>article-meta.ejs</code> 文件，在其中添加以下代码。想详细看代码怎么插入的可以去这里：《<a href="/2023/01/09/博客搭建教程/add-word-count/">在Snippet主题中添加字数统计</a>》，这篇文章也用到了这个文件。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 更新日期 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">&quot;fa-wrap&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">&quot;fa fa-refresh&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span> <span class="comment">&lt;!-- 刷新图标 --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">&quot;date-meta&quot;</span>&gt;</span>&lt;%- date(post.updated, format) %&gt;<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>　　表达式 <code>date(post.updated, format)</code> 我是参考上下文推理出来的。使用 <code>post.updated</code> 是因为我在网上看到有人说在博文的<strong>Front-Matter</strong>部分添加一项 <code>updated:</code> 就可以自动显示更新日期，后来我试了，发现不行。今日所见， <code>updated</code> 可以用在 <code>post.updated</code> 上。挑了几篇修改过的文章看了一下，显示日期的是正确的。</p>
+<p>　　后来我又发现新增的元素被 <code>&lt;span class=&quot;fa-wrap&quot;&gt;......&lt;/span&gt;</code> 包括，这应该是<strong>元素换行</strong>的类。因此上面<strong>字数统计</strong>中，在添加新元素时，也可以放在 <code>&lt;span class=&quot;fa-wrap&quot;&gt;......&lt;/span&gt;</code> 这段代码里面，以达到美观。</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="https://ads38.github.io">Taeyeon</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://ads38.github.io/posts/2d3aeb99.html">https://ads38.github.io/posts/2d3aeb99.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://ads38.github.io" target="_blank">Girls' Generation</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/Hexo/">Hexo</a><a class="post-meta__tags" href="/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/">博客搭建</a></div><div class="post_share"><div class="addtoany"><div class="a2a_kit a2a_kit_size_32 a2a_default_style"><a class="a2a_button_facebook"></a><a class="a2a_button_twitter"></a><a class="a2a_button_wechat"></a><a class="a2a_button_sina_weibo"></a><a class="a2a_button_facebook_messenger"></a><a class="a2a_button_email"></a><a class="a2a_button_copy_link"></a><a class="a2a_dd" target="_blank" rel="noopener" href="https://www.addtoany.com/share"></a></div></div><script async="async" src="https://static.addtoany.com/menu/page.js"></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/posts/1141fd.html"><img class="prev-cover" src="https://gcore.jsdelivr.net/gh/ads38/filebed@main/butterfly-cfg/1.png" onerror="onerror=null;src='https://gcore.jsdelivr.net/gh/ads38/filebed@main/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">Butterfly主题修改</div></div></a></div><div class="next-post pull-right"><a href="/posts/1e12bcaa.html"><img class="next-cover" src="https://gcore.jsdelivr.net/gh/ads38/filebed@main/add-word-count/1.PNG" onerror="onerror=null;src='https://gcore.jsdelivr.net/gh/ads38/filebed@main/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">在Snippet主题中添加字数统计</div></div></a></div></nav><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="utterances-wrap"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://gcore.jsdelivr.net/gh/ads38/filebed@main/img/avatar.jpg" onerror="this.onerror=null;this.src='https://gcore.jsdelivr.net/gh/ads38/filebed@main/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Taeyeon</div><div class="author-info__description">我只会在自己的博客网站上乱写，谢谢</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">42</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">8</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">7</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/ads38"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/ads38" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="/rss2.xml" target="_blank" title="RSS"><i class="fa fa-rss"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">网站主题全新改版！改为Butterfly了！外表更好看，内在更垃圾（指博客内容）<br><br> 本博客网站每页显示9篇文章<br><br> 推出了“会员文章”标签，需要密码访问哦<br><br> 本站亦添加了RSS订阅、字数统计、估算阅读时间功能并优化了文章链接</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/posts/66d6beb6.html" title="EASYHOOK, 异或运算，函数地址"><img src="https://gcore.jsdelivr.net/gh/ads38/filebed@main/reverse-easyhook/1.png" onerror="this.onerror=null;this.src='https://gcore.jsdelivr.net/gh/ads38/filebed@main/img/404.jpg'" alt="EASYHOOK, 异或运算，函数地址"/></a><div class="content"><a class="title" href="/posts/66d6beb6.html" title="EASYHOOK, 异或运算，函数地址">EASYHOOK, 异或运算，函数地址</a><time datetime="2023-01-14T08:02:06.000Z" title="发表于 2023-01-14 16:02:06">2023-01-14</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/d40bcb86.html" title="梅津美治郎"><img src="https://gcore.jsdelivr.net/gh/ads38/filebed@main/reverse-jpn/1.png" onerror="this.onerror=null;this.src='https://gcore.jsdelivr.net/gh/ads38/filebed@main/img/404.jpg'" alt="梅津美治郎"/></a><div class="content"><a class="title" href="/posts/d40bcb86.html" title="梅津美治郎">梅津美治郎</a><time datetime="2023-01-14T07:20:45.000Z" title="发表于 2023-01-14 15:20:45">2023-01-14</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/ec0f185c.html" title="Mysterious，修改寄存器+内存分析"><img src="https://gcore.jsdelivr.net/gh/ads38/filebed@main/reverse-myst/1.png" onerror="this.onerror=null;this.src='https://gcore.jsdelivr.net/gh/ads38/filebed@main/img/404.jpg'" alt="Mysterious，修改寄存器+内存分析"/></a><div class="content"><a class="title" href="/posts/ec0f185c.html" title="Mysterious，修改寄存器+内存分析">Mysterious，修改寄存器+内存分析</a><time datetime="2023-01-14T06:46:24.000Z" title="发表于 2023-01-14 14:46:24">2023-01-14</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/d9139ac.html" title="csaw2013reversing2，绕过反调试"><img src="https://gcore.jsdelivr.net/gh/ads38/filebed@main/reverse-csaw2013reversing2/1.png" onerror="this.onerror=null;this.src='https://gcore.jsdelivr.net/gh/ads38/filebed@main/img/404.jpg'" alt="csaw2013reversing2，绕过反调试"/></a><div class="content"><a class="title" href="/posts/d9139ac.html" title="csaw2013reversing2，绕过反调试">csaw2013reversing2，绕过反调试</a><time datetime="2023-01-14T05:27:32.000Z" title="发表于 2023-01-14 13:27:32">2023-01-14</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/a5f933f.html" title="re1，输入正确的flag，和IDA的简单用法"><img src="https://gcore.jsdelivr.net/gh/ads38/filebed@main/reverse-re1/1.jpg" onerror="this.onerror=null;this.src='https://gcore.jsdelivr.net/gh/ads38/filebed@main/img/404.jpg'" alt="re1，输入正确的flag，和IDA的简单用法"/></a><div class="content"><a class="title" href="/posts/a5f933f.html" title="re1，输入正确的flag，和IDA的简单用法">re1，输入正确的flag，和IDA的简单用法</a><time datetime="2023-01-13T10:28:52.000Z" title="发表于 2023-01-13 18:28:52">2023-01-13</time></div></div></div></div></div></div></main><footer id="footer" style="background: transparent"><div id="footer-wrap"><div class="copyright">&copy;2022 - 2023 By Taeyeon</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"></div><div id="rightside-config-show"><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module"></script><script src="/js/search/local-search.js"></script><div class="js-pjax"><script>(() => {
+  const $mermaidWrap = document.querySelectorAll('#article-container .mermaid-wrap')
+  if ($mermaidWrap.length) {
+    window.runMermaid = () => {
+      window.loadMermaid = true
+      const theme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'default'
+
+      Array.from($mermaidWrap).forEach((item, index) => {
+        const mermaidSrc = item.firstElementChild
+        const mermaidThemeConfig = '%%{init:{ \'theme\':\'' + theme + '\'}}%%\n'
+        const mermaidID = 'mermaid-' + index
+        const mermaidDefinition = mermaidThemeConfig + mermaidSrc.textContent
+        mermaid.mermaidAPI.render(mermaidID, mermaidDefinition, (svgCode) => {
+          mermaidSrc.insertAdjacentHTML('afterend', svgCode)
+        })
+      })
+    }
+
+    const loadMermaid = () => {
+      window.loadMermaid ? runMermaid() : getScript('https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js').then(runMermaid)
+    }
+
+    window.pjax ? loadMermaid() : document.addEventListener('DOMContentLoaded', loadMermaid)
+  }
+})()</script><script>function loadUtterances () {
+  let ele = document.createElement('script')
+  ele.setAttribute('id', 'utterances_comment')
+  ele.setAttribute('src', 'https://utteranc.es/client.js')
+  ele.setAttribute('repo', 'ads38/ads38.github.io')
+  ele.setAttribute('issue-term', 'pathname')
+  let nowTheme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'photon-dark' : 'github-light'
+  ele.setAttribute('theme', nowTheme)
+  ele.setAttribute('crossorigin', 'anonymous')
+  ele.setAttribute('async', 'true')
+  document.getElementById('utterances-wrap').insertAdjacentElement('afterbegin',ele)
+}
+
+function utterancesTheme () {
+  const iframe = document.querySelector('.utterances-frame')
+  if (iframe) {
+    const theme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'photon-dark' : 'github-light'
+    const message = {
+      type: 'set-theme',
+      theme: theme
+    };
+    iframe.contentWindow.postMessage(message, 'https://utteranc.es');
+  }
+}
+
+if ('Utterances' === 'Utterances' || !false) {
+  if (false) btf.loadComment(document.getElementById('utterances-wrap'), loadUtterances)
+  else loadUtterances()
+} else {
+  function loadOtherComment () {
+    loadUtterances()
+  }
+}</script></div><script src="//cdn.jsdelivr.net/npm/leancloud-storage@3.15.0/dist/av-min.js"></script><script src="//cdn.jsdelivr.net/npm/valine@1.5.1/dist/Valine.min.js"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
