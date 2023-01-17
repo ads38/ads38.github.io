@@ -15,8 +15,38 @@
     <atom:link href="https://ads38.github.io/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>我只会在自己的博客网站上乱写，谢谢</description>
-    <pubDate>Sat, 14 Jan 2023 08:42:42 GMT</pubDate>
+    <pubDate>Tue, 17 Jan 2023 14:58:56 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Hexo博客的注意事项</title>
+      <link>https://ads38.github.io/posts/44c7b736.html</link>
+      <guid>https://ads38.github.io/posts/44c7b736.html</guid>
+      <pubDate>Tue, 17 Jan 2023 14:09:51 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;p&gt;　　这篇文章我来说一下Hexo博客搭建时可能出现的错误，给出一个“比较”合理的解决方案。&lt;/p&gt;
+&lt;h1 id=&quot;1-hexo-init&quot;&gt;&lt;a href=&quot;#1-hexo-init&quot; class=&quot;headerlink&quot; title=&quot;1.hexo</description>
+          
+        
+      
+      
+      
+      
+      <category domain="https://ads38.github.io/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B/">博客搭建教程</category>
+      
+      
+      <category domain="https://ads38.github.io/tags/Hexo/">Hexo</category>
+      
+      <category domain="https://ads38.github.io/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/">博客搭建</category>
+      
+      
+      <comments>https://ads38.github.io/posts/44c7b736.html#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>EASYHOOK, 异或运算，函数地址</title>
@@ -236,35 +266,6 @@
       
       
       <comments>https://ads38.github.io/posts/2d3aeb99.html#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>在Snippet主题中添加字数统计</title>
-      <link>https://ads38.github.io/posts/1e12bcaa.html</link>
-      <guid>https://ads38.github.io/posts/1e12bcaa.html</guid>
-      <pubDate>Mon, 09 Jan 2023 06:12:43 GMT</pubDate>
-      
-        
-        
-          
-          
-      <description>&lt;h2 id=&quot;1-前言&quot;&gt;&lt;a href=&quot;#1-前言&quot; class=&quot;headerlink&quot;</description>
-          
-        
-      
-      
-      
-      
-      <category domain="https://ads38.github.io/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B/">博客搭建教程</category>
-      
-      
-      <category domain="https://ads38.github.io/tags/Hexo/">Hexo</category>
-      
-      <category domain="https://ads38.github.io/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/">博客搭建</category>
-      
-      
-      <comments>https://ads38.github.io/posts/1e12bcaa.html#disqus_thread</comments>
       
     </item>
     
