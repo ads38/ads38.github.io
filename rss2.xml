@@ -15,8 +15,31 @@
     <atom:link href="https://ads38.github.io/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>我只会在自己的博客网站上乱写，谢谢</description>
-    <pubDate>Wed, 18 Jan 2023 01:04:24 GMT</pubDate>
+    <pubDate>Fri, 20 Jan 2023 11:17:57 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>【随意聊】快过年了，说一说蠢蠢欲动的那些人、事儿</title>
+      <link>https://ads38.github.io/posts/cf25ced4.html</link>
+      <guid>https://ads38.github.io/posts/cf25ced4.html</guid>
+      <pubDate>Thu, 19 Jan 2023 01:27:45 GMT</pubDate>
+      
+      <description>该文章被加密，请花钱购买密码，谢谢^_^</description>
+      
+      
+      
+      
+      <category domain="https://ads38.github.io/categories/%E9%9A%8F%E7%AC%94/">随笔</category>
+      
+      
+      <category domain="https://ads38.github.io/tags/%E6%9D%82%E6%96%87/">杂文</category>
+      
+      <category domain="https://ads38.github.io/tags/%E4%BC%9A%E5%91%98%E6%96%87%E7%AB%A0/">会员文章</category>
+      
+      
+      <comments>https://ads38.github.io/posts/cf25ced4.html#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>Hexo博客的注意事项</title>
@@ -236,36 +259,6 @@
       
       
       <comments>https://ads38.github.io/posts/1141fd.html#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>在Snippet主题中添加博文更新日期</title>
-      <link>https://ads38.github.io/posts/2d3aeb99.html</link>
-      <guid>https://ads38.github.io/posts/2d3aeb99.html</guid>
-      <pubDate>Mon, 09 Jan 2023 09:48:39 GMT</pubDate>
-      
-        
-        
-          
-          
-      <description>&lt;p&gt;　　今天除了给自己的网站添加字数统计外，我无意中还探索到Snippet主题添加更新日期，尝试之后还真的成功了。网上根本就找不到资料，找到了也适用于其它的主题。&lt;/p&gt;
-&lt;p&gt;　　还是找到路径</description>
-          
-        
-      
-      
-      
-      
-      <category domain="https://ads38.github.io/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B/">博客搭建教程</category>
-      
-      
-      <category domain="https://ads38.github.io/tags/Hexo/">Hexo</category>
-      
-      <category domain="https://ads38.github.io/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/">博客搭建</category>
-      
-      
-      <comments>https://ads38.github.io/posts/2d3aeb99.html#disqus_thread</comments>
       
     </item>
     
