@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>逆向汇编常见知识点</title>
+      <link href="/posts/dca6272e.html"/>
+      <url>/posts/dca6272e.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="1-寄存器rax-eax-ax-ah-al"><a href="#1-寄存器rax-eax-ax-ah-al" class="headerlink" title="1.寄存器rax,eax,ax,ah,al"></a>1.寄存器rax,eax,ax,ah,al</h1><p>　　我们时常能够在IDA中看到不同的寄存器，在它的汇编代码中可以看见像rax，eax等这些寄存器，实际上它们指的是同一个寄存器，只是位数不一样而已。下表说明了rax, eax, ax, ah, al之间的区别。</p><div class="table-container"><table><thead><tr><th style="text-align:center">寄存器（以rax为例）</th><th style="text-align:center">位数(二进制)</th><th style="text-align:center">位数(十六进制)</th></tr></thead><tbody><tr><td style="text-align:center"><strong>rax</strong></td><td style="text-align:center">全 64 位</td><td style="text-align:center">全 16 位</td></tr><tr><td style="text-align:center"><strong>eax</strong></td><td style="text-align:center">低 32 位</td><td style="text-align:center">低 8 位</td></tr><tr><td style="text-align:center"><strong>ax</strong></td><td style="text-align:center">低 16 位</td><td style="text-align:center">低 4 位</td></tr><tr><td style="text-align:center"><strong>ah</strong></td><td style="text-align:center"><strong>ax</strong>的高8位</td><td style="text-align:center"><strong>ax</strong>的高2位</td></tr><tr><td style="text-align:center"><strong>al</strong></td><td style="text-align:center"><strong>ax</strong>的低8位</td><td style="text-align:center"><strong>ax</strong>的低2位</td></tr></tbody></table></div><p>　　其它寄存器例如rbx, rcx, rdx也是如此，但是寄存器rdi, rsi, rsp, rbp, rip的16位形式di, si, sp, bp, ip就不能够再细分为低8位或者高8位了。</p><h1 id="2-不同寄存器的功能"><a href="#2-不同寄存器的功能" class="headerlink" title="2.不同寄存器的功能"></a>2.不同寄存器的功能</h1><p>　　接下来介绍不同寄存器的功能。<br><strong><center>通用寄存器</center></strong></p><div class="table-container"><table><thead><tr><th style="text-align:center">寄存器名称</th><th style="text-align:center">具体</th><th style="text-align:center">其它形式</th><th style="text-align:center">用途</th></tr></thead><tbody><tr><td style="text-align:center"><strong>EAX</strong></td><td style="text-align:center">累加(Accumulator)寄存器</td><td style="text-align:center">RAX,AX(AH、AL)</td><td style="text-align:center">常用于乘、除法和<strong>函数返回值</strong></td></tr><tr><td style="text-align:center"><strong>EBX</strong></td><td style="text-align:center">基址(Base)寄存器</td><td style="text-align:center">RBX,BX(BH、BL)</td><td style="text-align:center">常做内存数据的指针, 或者说常以它为基址来访问内存.</td></tr><tr><td style="text-align:center"><strong>ECX</strong></td><td style="text-align:center">计数器(Counter)寄存器</td><td style="text-align:center">RCX,CX(CH、CL)</td><td style="text-align:center">常做字符串和循环操作中的计数器</td></tr><tr><td style="text-align:center"><strong>EDX</strong></td><td style="text-align:center">数据(Data)寄存器</td><td style="text-align:center">RDX,DX(DH、DL)</td><td style="text-align:center">常用于乘、除法和 I/O 指针</td></tr><tr><td style="text-align:center"><strong>ESI</strong></td><td style="text-align:center">来源索引(Source Index)寄存器</td><td style="text-align:center">RSI,SI</td><td style="text-align:center">常做内存数据指针和源字符串指针</td></tr><tr><td style="text-align:center"><strong>EDI</strong></td><td style="text-align:center">目的索引(Destination Index)寄存器</td><td style="text-align:center">RDI,DI</td><td style="text-align:center">常做内存数据指针和目的字符串指针</td></tr><tr><td style="text-align:center"><strong>ESP</strong></td><td style="text-align:center">堆栈指针(Stack Point)寄存器</td><td style="text-align:center">RSP,SP</td><td style="text-align:center">只做堆栈的栈顶指针; 不能用于算术运算与数据传送</td></tr><tr><td style="text-align:center"><strong>EBP</strong></td><td style="text-align:center">基址指针(Base Point)寄存器</td><td style="text-align:center">RBP,BP</td><td style="text-align:center">只做堆栈指针, 可以访问堆栈内任意地址, 经常用于中转 ESP 中的数据, 也常以它为基址来访问堆栈; 不能用于算术运算与数据传送</td></tr></tbody></table></div><p>　　再来小结一下CTF逆向中常用寄存器的用途。</p><p>　　eax：函数返回值存放寄存器。有时程序会判断字符串长度调用<code>strlen</code>函数，长度（结果）就会放在eax寄存器里；在比对字符串是否为正确的flag或其它目标字符串时（这个过程通常封装在函数里）也会将结果放到eax中，一般地，匹配则函数末尾会有指令“<code>mov eax, 1</code>”，不匹配则有指令“<code>xor eax, eax</code>”（自身异或后为0），最后返回到母函数时会有指令“<code>test eax, eax</code>”，即自身做“且”运算同时不改变eax里的值，再跳转到不同的代码段。</p><p>　　ebx：最近用的不是特别多，可能在访问指针类型数据时用的较多。</p><p>　　ecx：在循环操作中用的比较多，比如for循环里的i值就可能放到ecx里，不断的自增或自减，最后与某个内存基址相加以访问不同的内存空间。</p><p>　　edx：乘除法用的比较多，特别注意IDA中的<code>imul</code>, <code>idiv</code>指令，观察<code>edx</code>寄存器是否会发生什么变化。</p><p>　　esi, edi：常被用来做字符串指针寄存器，经常同<code>lea</code>指令结合使用。有字符串处理时可以看看这两个寄存器。</p><p>　　esp, ebp：esp是栈顶地址寄存器，存放栈顶地址；ebp则为当前栈帧(Stack Frame)的基地址寄存器，存放当前所处栈帧的基地址。一般esp地址小于等于ebp地址，当esp地址减小的时候，说明系统在分配栈空间，反之则是回收栈空间。这两个寄存器在函数调用时经常用到，因为要保护现场，子函数执行完毕后就是靠这俩寄存器恢复到母函数的现场。</p><p><strong><center>指令指针寄存器</center></strong></p><div class="table-container"><table><thead><tr><th style="text-align:center">寄存器名称</th><th style="text-align:center">具体</th><th style="text-align:center">其它形式</th><th style="text-align:center">用途</th></tr></thead><tbody><tr><td style="text-align:center"><strong>EIP</strong></td><td style="text-align:center">指令指针(Instruction Pointer)寄存器</td><td style="text-align:center">RIP,IP</td><td style="text-align:center">总是指向下一条指令的地址; 所有已执行的指令都被它指向过.</td></tr></tbody></table></div><p>　　这个寄存器肯定是不能作为数据存储的，因为下一条指令的地址必须要给出。</p><style>table th:first-of-type {    width: 20%;}table th:nth-of-type(2) {    width: 20%;}table th:nth-of-type(3) {    width: 20%;}table th:nth-of-type(4) {    width: 40%;}</style><h1 id="3-CTF路线图"><a href="#3-CTF路线图" class="headerlink" title="3.CTF路线图"></a>3.CTF路线图</h1><p>　　点击放大<br><img src="https://gcore.jsdelivr.net/gh/ads38/filebed@main/asm-tips/20230128204919.png" alt=""></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 信息安全 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 逆向 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>IgniteMe，大小写转换，异或运算</title>
       <link href="/posts/4fd73a70.html"/>
       <url>/posts/4fd73a70.html</url>
